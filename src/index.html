@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Translation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    div {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    div::after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: #3498db;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transition: transform 0.5s linear;
+    }
+
+    h1 {
+      margin: 0;
+      transition: color 0.5s linear;
+    }
+
+    div:hover h1 {
+      color: #3498db;
+      transition: color 0.5s linear;
+    }
+
+    div:hover::after {
+      transform: scaleX(1);
+      transition: transform 0.5s linear;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>前端学院</h1>
+  </div>
+</body>
+
+</html>
